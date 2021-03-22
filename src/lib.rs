@@ -3,7 +3,7 @@ use std::ffi::CString;
 use pyo3::prelude::*;
 
 mod bindings;
-use crate::bindings::levenshtein;
+use bindings::levenshtein;
 
 pub fn levi_distance(a: &str, b: &str) -> u32 {
     let a = CString::new(a).unwrap();
@@ -22,4 +22,14 @@ fn levin(_py: Python, m: &PyModule) -> PyResult<()> {
       Ok(levi_distance(a, b))
     }
 Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+use super::*;
+
+#[test]
+fn test_levi_distance() {
+    assert_eq!(1, levi_distance("rahul", "raul"));
+}
 }
