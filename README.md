@@ -10,16 +10,19 @@ An example of Rust bindings for a C library and a python wrapper on top of that 
 
 ```bash
 git clone https://github.com/rahulunair/levenshtein-rs/ && cd levenshtein-rs
-cargo build
 cargo test
 ```
 
 output:
 ```bash
-   Compiling levinstien-rs v0.1.0 (Coding/levenshtein-rs)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.46s
-     Running `target/debug/examples/hello`
-distance is :: 1
+running 7 tests
+test tests::test_distance_by_1 ... ok
+test tests::test_distance_by_2 ... ok
+test tests::test_distance_empty ... ok
+test tests::test_distance_empty_1 ... ok
+test tests::test_distance_not_empty ... ok
+test tests::test_distance_equal ... ok
+test tests::test_distance_not_equal ... ok
 ```
 
 ### To build the python wheel
