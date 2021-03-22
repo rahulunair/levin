@@ -3,7 +3,7 @@ use std::path::PathBuf;
 fn main() {
     println!("cargo:rustc-rerun-if-changed=./lib/levenshtein.c");
     println!("cargo:rustc-link-search=native=.");
-    println!("cargo:rustc-link-lib=static=levenshtein");
+    println!("cargo:rustc-link-lib=dylib=levenshtein");
 
     cc::Build::new()
         .file("lib/levenshtein.c")
