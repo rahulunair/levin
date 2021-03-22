@@ -1,4 +1,4 @@
-use levinstien_rs::levi_distance;
+use levin::levi_distance;
 
 fn main() {
     let a = "hello";

@@ -1,11 +1,16 @@
 [package]
-name = "levinstien-rs"
+name = "levin"
 version = "0.1.0"
 authors = ["Unnikrishnan Nair, Rahul <rahulunair@gmail.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "levin"
+crate-type = ["cdylib"]
 
 [build-dependencies]
 bindgen = "0.57.0"
 cc = "1.0.67"
+
+[dependencies]
+pyo3 = { "version" = "0.13.2", "features" = ["extension-module"] }
