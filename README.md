@@ -11,7 +11,7 @@ An example of Rust bindings for a C library and a python wrapper on top of that 
 ```bash
 git clone https://github.com/rahulunair/levenshtein-rs/ && cd levenshtein-rs
 cargo build
-cargo run --example hello
+cargo test
 ```
 
 output:
@@ -32,6 +32,17 @@ maturin build
 This will build the python package for levin.
 
 
+## using python package
+
+```bash
+pip install levin
+```
+
+```python
+from levin import dist
+>> dist("rahul", "raul")
+>> 1
+```
 ## References
 https://subscription.packtpub.com/book/application_development/9781838828103/10/ch10lvl1sec93/using-external-c-c-libraries-from-rust
  
