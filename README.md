@@ -19,3 +19,4 @@ output:
      Running `target/debug/examples/hello`
 distance is :: 1
 ```
+Reference: https://subscription.packtpub.com/book/application_development/9781838828103/10/ch10lvl1sec93/using-external-c-c-libraries-from-rust
