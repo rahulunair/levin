@@ -8,7 +8,6 @@ An example of Rust bindings for a C library and a python wrapper on top of that 
 ```bash
 git clone https://github.com/rahulunair/levenshtein-rs/ && cd levenshtein-rs
 cargo build
-mv liblevenshtein.so.a liblevenshtein.so
 cargo run --example hello
 ```
 
