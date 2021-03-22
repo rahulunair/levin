@@ -1,14 +1,14 @@
 use std::path::PathBuf;
 
 fn main() {
-    println!("cargo:rustc-rerun-if-changed=.");
-    println!("cargo:rustc-link-search=.");
-    println!("cargo:rustc-link-lib=levenshtein");
+    println!("cargo:rustc-rerun-if-changed=./lib/levenshtein.c");
+    println!("cargo:rustc-link-search=native=.");
+    println!("cargo:rustc-link-lib=static=levenshtein");
 
     cc::Build::new()
         .file("lib/levenshtein.c")
         .out_dir(".")
-        .compile("levenshtein.so");
+        .compile("levenshtein");
 
     let bindings = bindgen::Builder::default()
         .header("lib/levenshtein.h")
